@@ -29,12 +29,22 @@
           <button type="submit">Go</button>
         </p>
   </form>
+
+  <div class="details">
+  </div>
+
+
     <script type="text/javascript">
       var myForm = document.querySelector('form');
       myForm.onsubmit = function(ev){
-        console.log(this.firstName.value);
+        ev.preventDefault();
+        var details = document.querySelector('div.details');
+        details.innerText += this.firstName.value;
       };
     </script>
+
+
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
