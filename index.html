@@ -1,29 +1,37 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Baby's first Java Script</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <h1> My Cool Page</h1>
 
-    <p id = "wicked">
-      This is a wicked Page
-    </p >
-
-    <p class="wow">
-      LOOK AT ME I'M CODING. Whee! Hee!!
-    </p>
-    <p class="wow">
-      LOsjghsdufkhsdgsdf
-    </p>
-
-
-
-
+  <form class="" action="index.html" method="post">
+      <p>
+        <label for=""> First Name</Label>
+        <input type = "text" name="firstName">
+      </p>
+      <p>
+        <input type="submit" value="click"
+      </p>
+      <p>
+        <button type="submit">Go</button>
+      </p>
+  </form>
     <script type="text/javascript">
-      var text = document.querySelector('h1').innerText;
-      console.log(text);
+      var myForm = document.querySelector('form');
+      myForm.onsubmit = function(ev){
+        debugger;
+        console.log(this.firstName.value);
+      };
     </script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
