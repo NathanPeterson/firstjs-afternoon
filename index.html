@@ -39,7 +39,8 @@
       myForm.onsubmit = function(ev){
         ev.preventDefault();
         var details = document.querySelector('div.details');
-        details.innerText += this.firstName.value;
+        //details.innerText += this.firstName.value;
+        details.innerHTML += '<p>' + this.firstName.value + '</p>';
       };
     </script>
 
