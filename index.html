@@ -10,22 +10,28 @@
   </head>
   <body>
 
-  <form class="" action="index.html" method="post">
-      <p>
-        <label for=""> First Name</Label>
-        <input type = "text" name="firstName">
-      </p>
-      <p>
-        <input type="submit" value="click"
-      </p>
-      <p>
-        <button type="submit">Go</button>
-      </p>
+    <form>
+        <p>
+          <label for="firstName">First Name</label>
+          <input type="text" name="firstName" required>
+        </p>
+        <p>
+          <label for="hairColor">Hair Color</label>
+          <input type="color" name="hairColor" required>
+        </p>
+        <p>
+          <label for="age">Age</label>
+          <input type="number" name="age" placeholder="Your Age" required>
+        </p>
+        <label for="birthplace">Birthplace</label>
+          <input type="text" name="birthplace" placeholder="Where were you born?" required>
+        <p>
+          <button type="submit">Go</button>
+        </p>
   </form>
     <script type="text/javascript">
       var myForm = document.querySelector('form');
       myForm.onsubmit = function(ev){
-        debugger;
         console.log(this.firstName.value);
       };
     </script>
