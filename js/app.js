@@ -5,21 +5,25 @@ var buildColorDiv = function(color) {
 };
 
 var buildList = function(listValues = {}){
-    return ' \
-    <dl> \
-      <dt>Name</dt> \
-      <dd>' + listValues.name + '</dd> \
-          \
-      <dt>Hair Color</dt> \
-      <dd>' + listValues.color + '</dd> \
-        \
-      <dt>Age</dt> \
-      <dd>' + listValues.age+ '</dd> \
-        \
-      <dt>Birthplace</dt> \
-      <dd>' + listValues.birthplace + '</dd> \
-    </dl>';
+    var dl = document.createElement('dl');
+    dl.style.border = '1px solid #999'
+    dl.appendChild(buildListItem('Name', listValues.name))
+    dl.appendChild(buildListItem('color', listValues.color))
+    dl.appendChild(buildListItem('Age', listValues.age))
+    dl.appendChild(buildListItem('Birth Place', listValues.birthplace))
+    return dl;
 };
+
+var buildListItem = function(term, definition){
+  var li = document.createElement('li');
+  var dt = document.createElement('dt');
+  var dd = document.createElement('dd');
+  dt.innerHTML = term;
+  dd.innerHTML = definition;
+  li.appendChild(dt)
+  li.appendChild(dd)
+  return li;
+}
 
 var addValuesToDetails = function(ev) {
   ev.preventDefault();
@@ -27,13 +31,23 @@ var addValuesToDetails = function(ev) {
   var hairColor = this.hair_color;
   var colorDiv = buildColorDiv(hairColor.value);
 
+  // ANOTHER WAY TO CREATE OBJECT
+  //
+  // var formValues={
+  //   name: his.name.value,
+  //   age: this.age.value,
+  //   birthplace:this.birthplace.value,
+  //   color: colorDiv
+  // };
+
+
   var object = {};
   object.name = this.name.value;
   object.color= colorDiv;
   object.age = this.age.value;
   object.birthplace = this.birthplace.value;
 
-  details.innerHTML += buildList(object);
+  details.appendChild(buildList(object));
 
 };
 
