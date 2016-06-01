@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
+    <!-- <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css"> -->
   </head>
   <body>
 
@@ -26,26 +26,18 @@
         <label for="birthplace">Birthplace</label>
           <input type="text" name="birthplace" placeholder="Where were you born?" required>
         <p>
-          <button class = "button" type="submit">Go</button>
+          <button class="button" type="submit">Go</button>
         </p>
   </form>
 
   <div class="details">
+    <ul class="list">
+
+    </ul>
   </div>
 
 
-    <script type="text/javascript">
-      var myForm = document.querySelector('form');
-      myForm.onsubmit = function(ev){
-        ev.preventDefault();
-        var details = document.querySelector('div.details');
-        //details.innerText += this.firstName.value;
-        details.innerHTML += this.firstName.value + ' | ';
-        details.innerHTML += this.hairColor.value + " | ";
-        details.innerHTML += this.age.value+ " | ";
-        details.innerHTML += this.birthplace.value + '</p>';
-      };
-    </script>
+
 
 
 
