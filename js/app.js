@@ -1,4 +1,8 @@
-$(document).foundation()
+$(document).foundation();
+
+var buildColorDiv = function(color) {
+  return '<div style="height: 100px; width: 100px; background-color: ' + color + '"></div>'
+};
 
 var addValuesToDetails = function(ev) {
   ev.preventDefault();
@@ -8,7 +12,7 @@ var addValuesToDetails = function(ev) {
   var age = this.age;
   var birthplace = this.birthplace;
 
-  var colorDiv = '<div style="height: 100px; width: 100px; background-color: ' + hairColor.value + '"></div>';
+  var colorDiv = buildColorDiv(hairColor.value);
 
   details.innerHTML += ' \
     <dl> \
@@ -25,6 +29,5 @@ var addValuesToDetails = function(ev) {
       <dd>' + birthplace.value + '</dd> \
     </dl>';
 };
-
 
 document.querySelector('form').onsubmit = addValuesToDetails;
