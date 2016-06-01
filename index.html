@@ -1,36 +1,38 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First JavaScript</title>
+    <title>Foundation for Sites</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
     <section>
       <div>
-        <form action="" method="post">
-        <label for="name">Name</label>
-        <input type="text" name="name" placeholder="Your Name" required/>
+        <form>
+          <p>
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" required>
+          </p>
+          <p>
+            <label for="hairColor">Hair Color</label>
+            <input type="color" name="hairColor" required>
+          </p>
+          <p>
+            <label for="age">Age</label>
+            <input type="number" name="age" placeholder="Your Age" required>
+          </p>
+          <label for="birthplace">Birthplace</label>
+            <input type="text" name="birthplace" placeholder="Where were you born?" required>
+          <p>
+            <button class="button" type="submit">Go</button>
+          </p>
+        </form>
 
-        <label for="hair_color">Hair Color</label>
-        <input type="color" name="hair_color" required/>
-
-        <label for="age">Age</label>
-        <input type="number" name="age" placeholder="Your Age" required/>
-
-        <label for="birthplace">Birthplace</label>
-        <input type="text" name="birthplace" placeholder="Where were you born?" required/>
-
-        <button class="button">Submit</button>
-      </form>
-      </div>
-
-      <div class="details">
-
+        <div class="details">
+        </div>
       </div>
     </section>
 
